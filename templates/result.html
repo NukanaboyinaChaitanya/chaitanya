@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Resume Screening</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+        .result-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .title {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .score-box {
+            background-color: #f1f8fe;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .score-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3498db;
+            margin: 20px 0;
+        }
+        .category-value {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .btn-back {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            border: none;
+            font-weight: 500;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #2980b9;
+        }
+        .score-label {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        .category-label {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-box">
+            <h1 classmaa="title">Resume Screening Results</h1>
+            
+            <div class="score-box">
+                <div class="score-label">ATS Score</div>
+                <div class="score-value">{{ score }}%</div>
+            </div>
+            
+            <div>
+                <div class="category-label">Predicted Job Category</div>
+                <div class="category-value">{{ category }}</div>
+            </div>
+            
+            <div>
+                <a href="/" class="btn-back">Analyze Another Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
